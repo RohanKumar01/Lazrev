@@ -68,5 +68,28 @@ function page2Animation() {
   });
 }
 
+function page3VideoAnimation() {
+  var page3Center = document.querySelector(".page3-center");
+  var video = document.querySelector("#page3 video");
+
+  page3Center.addEventListener("click", function () {
+    video.play();
+    gsap.to(video, {
+      transform: "scaleX(1) scaleY(1)",
+      opacity: 1,
+      bordeRadius: 0,
+    });
+  });
+
+  video.addEventListener("click", function () {
+    video.pause();
+    gsap.to(video, {
+      transform: "scaleX(0.7) scaleY(0)",
+      opacity: 0,
+      bordeRadius: "30px",
+    });
+  });
+}
 navAnimation();
 page2Animation();
+page3VideoAnimation();
