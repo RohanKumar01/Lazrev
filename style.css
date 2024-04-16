@@ -428,6 +428,7 @@ nav button svg {
 }
 
 #page5 {
+  padding-top: 4vh;
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -438,13 +439,36 @@ nav button svg {
   padding: 18vh 5vw;
 }
 
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header i {
+  font-size: 4vh;
+  padding-right: 2vh;
+  padding-bottom: 3vh;
+}
+
 #page5 button {
   background-color: #0ba34e;
-  padding: 0.9vw 2.5vw;
-  font-size: 1.2vw;
+
+  padding: 1.4vw 4vw;
+  font-size: 1vw;
   border-radius: 50px;
   font-weight: 600;
   border: none;
+
+  text-transform: uppercase;
+}
+
+#page5-left {
+  position: sticky;
+  padding-left: 2vw;
+  display: flex;
+  top: 15%;
+  justify-content: center;
+  align-items: center;
 }
 
 #page5-right {
@@ -468,7 +492,7 @@ nav button svg {
   width: 100%;
   margin-top: 5vh;
   padding: 2.8vh 0;
-  border-top: 2px solid #fff;
+  border-top: 1px solid #a9a9a9;
   border-bottom: 0.5px solid #989898;
 }
 
@@ -488,4 +512,62 @@ nav button svg {
   font-size: 1.8vh;
   /* line-height: 5vh; */
   text-transform: uppercase;
+}
+
+#page5-section {
+  padding-top: 2.5vh;
+  border-top: 1px solid #787878;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 8vh;
+  position: relative;
+  padding-top: 2.5vh;
+  overflow: hidden;
+}
+
+.section-right {
+  width: 25%;
+  z-index: 8;
+}
+.section-right h2 {
+  font-size: 2vw;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+.section-left {
+  width: 60%;
+  z-index: 8;
+  display: flex;
+  justify-content: space-between;
+}
+.section-left i {
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  font-size: 2.5vh;
+}
+
+.over {
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+#page5-section:hover .section-left i {
+  padding-right: 1.2vw;
+}
+#page5-section:hover .section-right h2 {
+  padding-left: 1vw;
+}
+#page5-section:hover .over {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+summary::marker {
+  content: "";
 }
