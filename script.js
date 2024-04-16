@@ -91,17 +91,21 @@ function page3VideoAnimation() {
   });
 }
 
-var sections = document.querySelectorAll(".sec-right");
-sections.forEach(function (elem) {
-  elem.addEventListner("mouseenter", function () {
-    elem.childNodes[3].style.opacity = 1;
-    elem.childNodes[3].play();
+function page4Videonimation() {
+  var sections = document.querySelectorAll(".sec-right");
+  sections.forEach(function (elem) {
+    elem.addEventListner("mouseenter", function () {
+      elem.childNodes[3].style.opacity = 1;
+      elem.childNodes[3].play();
+    });
+    elem.addEventListner("mouseleave", function () {
+      elem.childNodes[3].style.opacity = 0;
+      elem.childNodes[3].load();
+    });
   });
-  elem.addEventListner("mouseleave", function () {
-    elem.childNodes[3].style.opacity = 0;
-    elem.childNodes[3].load();
-  });
-});
+}
+
+//page4Videonimation();
 // navAnimation();
 // page2Animation();
 // page3VideoAnimation();
