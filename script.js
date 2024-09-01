@@ -1,3 +1,40 @@
+function LocomotiveAnimation() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
+
+    // for tablet smooth
+    tablet: { smooth: true },
+
+    // for mobile
+    smartphone: { smooth: true },
+  });
+  locoScroll.on("scroll", ScrollTrigger.update);
+
+  ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.scrollTo(value, 0, 0)
+        : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
+  });
+
+  // Remove code from red pannel to here from original Scrolltrigger + Locomotive
+
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+  ScrollTrigger.refresh();
+}
 function navAnimation() {
   var nav = document.querySelector("nav");
 
@@ -38,7 +75,6 @@ function navAnimation() {
     });
   });
 }
-
 function page2Animation() {
   var rightElems = document.querySelectorAll(".right-elem");
   var relemImg = document.querySelectorAll("#righ-elem1 img");
@@ -64,7 +100,6 @@ function page2Animation() {
     });
   });
 }
-
 function page3VideoAnimation() {
   var page3Center = document.querySelector(".page3-center");
   var video = document.querySelector("#page3 video");
@@ -87,7 +122,6 @@ function page3VideoAnimation() {
     });
   });
 }
-
 function page4Videonimation() {
   var sections = document.querySelectorAll(".sec-right");
   sections.forEach(function (elem) {
@@ -133,6 +167,8 @@ function page6Animation() {
 //   }
 //   flag = true;
 // });
+
+LocomotiveAnimation();
 navAnimation();
 page2Animation();
 page3VideoAnimation();
