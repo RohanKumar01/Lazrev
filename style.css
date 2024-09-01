@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "gilroy";
   color: white;
+  /* cursor: default; */
 }
 
 @font-face {
@@ -148,6 +149,7 @@ nav button svg {
   font-weight: 900;
   line-height: 20vh;
   letter-spacing: 0.1vw;
+  cursor: default;
 }
 
 #page1 p {
@@ -173,6 +175,7 @@ nav button svg {
   border: 1px solid rgb(228, 226, 226);
   border-radius: 50px;
   color: white;
+  cursor: pointer;
 }
 
 #page1-something h4:nth-last-child(2) {
@@ -233,6 +236,7 @@ nav button svg {
 }
 
 #page2 {
+  cursor: default;
   height: 100vh;
   width: 100%;
   border: 1px solid #333;
@@ -267,6 +271,8 @@ nav button svg {
 #page2-right {
   height: 100%;
   width: 50%;
+  cursor: pointer;
+
   /* background-color: #333; */
 }
 
@@ -279,6 +285,8 @@ nav button svg {
 
 .right-elem h2 {
   font-size: 1.4vw;
+  cursor: pointer;
+
   font-weight: 400;
 }
 .right-elem img {
@@ -313,6 +321,7 @@ nav button svg {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .page3-center .icon i {
@@ -336,6 +345,8 @@ nav button svg {
 
 .page3-center:hover h5 {
   opacity: 1;
+  cursor: pointer;
+
   transform: translateY(0%);
 }
 
@@ -353,6 +364,7 @@ nav button svg {
 #page4 {
   min-height: 100vh;
   width: 100%;
+  cursor: default;
   position: relative;
   background-color: #111;
   /* display: flex; */
@@ -395,6 +407,7 @@ nav button svg {
 }
 
 .sec-left button {
+  cursor: pointer;
   padding: 2.6vh 3.4vw;
   font-weight: 600;
   font-size: 2.2vh;
@@ -426,6 +439,7 @@ nav button svg {
   color: black;
 } */
 .sec-right video {
+  cursor: pointer;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -442,6 +456,7 @@ nav button svg {
 }
 
 #page5 {
+  /* border-top: 1px solid #dadadada; */
   padding-top: 4vh;
   min-height: 100vh;
   width: 100%;
@@ -471,6 +486,7 @@ nav button svg {
   border-radius: 50px;
   font-weight: 600;
   border: none;
+  cursor: pointer;
   text-transform: uppercase;
 }
 
@@ -485,6 +501,7 @@ nav button svg {
 
 #page5-right {
   width: 70%;
+  cursor: default;
 }
 
 #page5-right > p {
@@ -493,6 +510,7 @@ nav button svg {
 #page5-right > p span {
   width: 15vw;
   display: inline-block;
+  /* cursor: pointer; */
 }
 #page5-right > p span h2 {
   width: 15vw;
@@ -516,6 +534,7 @@ nav button svg {
   margin-top: 5vh;
   /* flex-direction: row; */
   margin-bottom: 4vh;
+  cursor: pointer;
 }
 #page5-content #flex h4 {
   border-radius: 50px;
@@ -634,6 +653,8 @@ summary::marker {
 #page6-content button {
   position: sticky;
   top: 0;
+  cursor: pointer;
+
   /* margin-top: 1vh; */
   background-color: #4f5bff;
   font-family: "Grotesk";
@@ -653,6 +674,7 @@ summary::marker {
 }
 
 #page6-content {
+  cursor: default;
   display: flex;
   position: relative;
   height: 70%;
@@ -787,6 +809,7 @@ summary::marker {
   font-size: 0.85vw;
   letter-spacing: 0.01vw;
   margin-bottom: 0.5vh;
+  cursor: pointer;
 }
 .btm6-parts h4 span {
   background-color: #333;
