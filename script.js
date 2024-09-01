@@ -94,18 +94,40 @@ function page3VideoAnimation() {
 function page4Videonimation() {
   var sections = document.querySelectorAll(".sec-right");
   sections.forEach(function (elem) {
-    elem.addEventListner("mouseenter", function () {
+    elem.addEventListener("mouseenter", function () {
+      // console.log("In mous enter", elem.childNodes[3]);
       elem.childNodes[3].style.opacity = 1;
       elem.childNodes[3].play();
     });
-    elem.addEventListner("mouseleave", function () {
+
+    elem.addEventListener("mouseleave", function () {
       elem.childNodes[3].style.opacity = 0;
+      // console.log("In mouse leave", elem.childNodes[3]);
+
       elem.childNodes[3].load();
     });
   });
 }
+function page6Animation() {
+  gsap.from(".btm6-parts h4", {
+    x: 0,
+    duration: 1.2,
+    // stagger: {
+    //   amount: -0.5,
+    // },
+    scrollTrigger: {
+      trigger: ".btm6-parts",
+      scroller: "body",
+      // markers: true,  //MArkrs to see strt and end of scroll trigger
+      start: "top 80%",
+      end: "top 0%",
+      scrub: true,
+    },
+  });
+}
 
-//page4Videonimation();
-// navAnimation();
-// page2Animation();
-// page3VideoAnimation();
+navAnimation();
+page2Animation();
+page3VideoAnimation();
+page4Videonimation();
+page6Animation();

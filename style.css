@@ -2,8 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: gilroy;
+  font-family: "gilroy";
   color: white;
+}
+
+@font-face {
+  font-family: Grotesk;
+  src: url(./Assets/NeueHaasDisplayMediu.ttf);
 }
 
 html,
@@ -19,8 +24,9 @@ nav {
   width: 100%;
   padding: 2vw 6.8vw;
   justify-content: space-between;
-  height: 12vh;
+  height: 10vh;
   z-index: 10;
+  background-color: black;
 }
 
 nav h1 {
@@ -348,7 +354,7 @@ nav button svg {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  background-color: #fff;
+  background-color: #111;
   /* display: flex; */
   /* flex-direction: column; */
   /* justify-content: space-between; */
@@ -360,7 +366,7 @@ nav button svg {
   display: flex;
   /* flex-direction: row; */
   /* display: inline-block; */
-  padding: 17vh 6.5vw;
+  padding: 6vh 6.5vw;
   justify-content: space-between;
 }
 
@@ -368,17 +374,21 @@ nav button svg {
   color: #111;
   height: 100%;
   width: 26%;
-  border-top: 1px solid #d5d4d4;
+  border-top: 1px solid #7878;
   padding: 2.5vh 0;
+  color: #fff;
+}
+
+.sec-left:hover {
+  border-top: 1px solid #eae9e9;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 .sec-left h2 {
-  color: #111;
   font-size: 2.5vw;
   font-weight: bolder 400;
   padding-bottom: 15vh;
 }
 .sec-left p {
-  color: #111;
   font-size: 2.55vh;
   font-weight: 500;
   padding-bottom: 19vh;
@@ -395,22 +405,26 @@ nav button svg {
   background-color: #4f5bff;
 }
 .sec-right {
+  display: flex;
   position: relative;
   height: 100%;
   width: 70%;
-  /* border-top: 1px solid #d5d4d4; */
+  border-top: 1px solid #7878;
+  padding-top: 2vh;
 }
 
 .sec-right .hover {
   position: absolute;
   background-color: #4f5bff;
-  /* display: flex; */
-  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  padding: 12vh 9vh;
+  border-radius: 50%;
 }
 
-.sec-right h5 {
+/* .sec-right h5 {
   color: black;
-}
+} */
 .sec-right video {
   height: 100%;
   width: 100%;
@@ -452,13 +466,11 @@ nav button svg {
 
 #page5 button {
   background-color: #0ba34e;
-
   padding: 1.4vw 4vw;
   font-size: 1vw;
   border-radius: 50px;
   font-weight: 600;
   border: none;
-
   text-transform: uppercase;
 }
 
@@ -573,29 +585,66 @@ summary::marker {
 }
 
 #page6 {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #fff;
   padding: 10vh 12vw;
   width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#page6-content {
+  width: 100%;
+}
+
+/* #page6 button {
+  background-color: #0ba34e;
+  padding: 1.4vw 4vw;
+  font-size: 1vw;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+} */
+
+#page6-left {
+  position: sticky;
+  padding-left: 2vw;
+  display: flex;
+  top: 15%;
+  height: 0%;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 #page6 > h1 {
   font-size: 6vw;
   color: #000;
-  padding-left: 25vw;
+  padding-left: 20vw;
   padding-right: 7vw;
-  padding-bottom: 10vh;
-  border-bottom: 1px solid #dadada;
-  line-height: 5.6vw;
+  padding-bottom: 15vh;
+  /* border-bottom: 1px solid #dadada; */
+  line-height: 5.8vw;
+  padding-top: 4.5vw;
+  font-weight: 600;
 }
 
 #page6-content button {
+  position: sticky;
+  top: 0;
+  /* margin-top: 1vh; */
   background-color: #4f5bff;
-
-  padding: 1.4vw 4vw;
+  font-family: "Grotesk";
+  padding: 1.4vw 2.8vw;
+  text-align: center;
+  justify-content: center;
+  height: 8vh;
+  width: 20vw;
   font-size: 1vw;
   border-radius: 50px;
-  font-weight: 600;
+  font-weight: 550;
   border: none;
   display: flex;
   align-items: flex-start;
@@ -603,13 +652,150 @@ summary::marker {
   text-transform: uppercase;
 }
 
-#page6-content #right-6 {
-  width: 70%;
+#page6-content {
+  display: flex;
+  position: relative;
+  height: 70%;
+  gap: 5vw;
+  /* position: sticky; */
+  top: 0;
+  /* padding-top: 1vh; */
+  margin-left: -7vw;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 15vh;
 }
 
 #page6-content #right-6 p {
-  font-size: 1.5vw;
+  font-size: 3.5vh;
   color: #000;
-  margin-bottom: 5vh;
+  /* margin-bottom: 5vh; */
   width: 80%;
+  /* font-size: 3.2rem; */
+  font-weight: 600;
+  font-family: "Grotesk";
+  word-spacing: 1%;
+  line-height: 1.3;
+}
+
+#para1 {
+  padding-bottom: 5vw;
+}
+
+#page6-left {
+  position: sticky;
+  padding-left: 2vw;
+  display: flex;
+  top: 15%;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+#page6-bottom {
+  height: 44v;
+  width: 110%;
+  border-top: 1px solid #dadada;
+  display: flex;
+  /* position: relative; */
+  /* align-items: center; */
+  /* background-color: #111; */
+  gap: 2vw;
+  color: #000;
+}
+
+#btm6-part1 {
+  width: 30%;
+  height: 100%;
+}
+
+#btm6-part2 {
+  border-right: 1px solid #dadada;
+  border-left: 1px solid #dadada;
+  padding-left: 5vh;
+  height: 100%;
+  width: 40%;
+  /* padding-bottom: 5px; */
+}
+
+#btm6-part2 h4:nth-child(2) {
+  transform: translateX(0);
+}
+#btm6-part2 h4:nth-child(3) {
+  transform: translateX(10%);
+}
+#btm6-part2 h4:nth-child(4) {
+  transform: translateX(22%);
+}
+#btm6-part2 h4:nth-child(5) {
+  transform: translateX(32%);
+}
+#btm6-part2 h4:nth-child(6) {
+  transform: translateX(40%);
+}
+#btm6-part2 h4:nth-child(7) {
+  transform: translateX(50%);
+}
+#btm6-part3 h4:nth-child(2) {
+  transform: translateX(0%);
+}
+#btm6-part3 h4:nth-child(3) {
+  transform: translateX(20%);
+}
+#btm6-part4 h4:nth-child(2) {
+  transform: translateX(0%);
+}
+#btm6-part4 h4:nth-child(3) {
+  transform: translateX(15%);
+}
+#btm6-part4 h4:nth-child(4) {
+  transform: translateX(25%);
+}
+
+#btm6-part3 {
+  border-right: 1px solid #dadada;
+  height: 100%;
+  width: 25%;
+}
+#btm6-part4 {
+  border-right: 1px solid #dadada;
+  height: 100%;
+  width: 30%;
+}
+#btm6-part5 {
+  height: 100%;
+  width: 15%;
+}
+
+.btm6-parts {
+  padding: 3vh 0;
+}
+.btm6-parts h5 {
+  color: #000;
+  align-content: flex-start;
+  font-family: "Grotesk";
+  font-weight: 400;
+  font-size: 1vw;
+  margin-bottom: 2vh;
+}
+
+.btm6-parts h4 {
+  background-color: #111;
+  width: 18vw;
+  padding: 10px;
+  padding-right: 50px;
+  border-radius: 50px;
+  font-weight: 400;
+  font-size: 0.85vw;
+  letter-spacing: 0.01vw;
+  margin-bottom: 0.5vh;
+}
+.btm6-parts h4 span {
+  background-color: #333;
+  padding: 0.4vw 0.8vw;
+  border-radius: 50%;
+  margin-right: 0.6vw;
+}
+
+#page7 {
+  height: 120vh;
+  width: 100%;
 }
