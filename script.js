@@ -45,25 +45,22 @@ function page2Animation() {
 
   rightElems.forEach(function (elem) {
     elem.addEventListener("mouseenter", function () {
-      gsap.to(elem.childNodes[3]),
-        {
-          opacity: 1,
-          scale: 1,
-        };
+      gsap.to(elem.childNodes[3], {
+        opacity: 1,
+        scale: 1,
+      });
     });
     elem.addEventListener("mouseleave", function () {
-      gsap.to(elem.childNodes[3]),
-        {
-          opacity: 0,
-          scale: 0,
-        };
+      gsap.to(elem.childNodes[3], {
+        opacity: 0,
+        scale: 0,
+      });
     });
     elem.addEventListener("mousemove", function (dets) {
-      gsap.to(elem.childNodes[3]),
-        {
-          x: dets.x - elem.getBoundingClientRect.x - 90,
-          y: dets.y - elem.getBoundingClientRect.y - 200,
-        };
+      gsap.to(elem.childNodes[3], {
+        x: dets.x - elem.getBoundingClientRect().x - 50,
+        y: dets.y - elem.getBoundingClientRect().y - 80,
+      });
     });
   });
 }
@@ -126,6 +123,16 @@ function page6Animation() {
   });
 }
 
+// var section1 = document.querySelectorAll("#header")[0];
+// console.log(section1);
+// var flag = false;
+// section1.addEventListener("click", function () {
+//   document.querySelector("#header i").style.transform = "rotate(180deg)";
+//   if (flag) {
+//     document.querySelector("#header i").style.transform = "rotate(180deg)";
+//   }
+//   flag = true;
+// });
 navAnimation();
 page2Animation();
 page3VideoAnimation();
