@@ -156,19 +156,36 @@ function page6Animation() {
     },
   });
 }
+function loadingAnimaton() {
+  var tl = gsap.timeline();
 
-// var section1 = document.querySelectorAll("#header")[0];
-// console.log(section1);
-// var flag = false;
-// section1.addEventListener("click", function () {
-//   document.querySelector("#header i").style.transform = "rotate(180deg)";
-//   if (flag) {
-//     document.querySelector("#header i").style.transform = "rotate(180deg)";
-//   }
-//   flag = true;
-// });
+  tl.from("#page1", {
+    opacity: 0,
+    duration: 0.3,
+    delay: 0.2,
+  });
+
+  tl.from("#page1", {
+    transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
+    borderRadius: "150px",
+    duration: 1.5,
+    ease: "expo.out",
+  });
+
+  tl.from("nav", {
+    opacity: 0,
+    delay: -0.2,
+  });
+
+  tl.from("#page1 h1, #page1 p, #page1 div", {
+    opacity: 0,
+    duration: 0.4,
+    stagger: 0.2,
+  });
+}
 
 LocomotiveAnimation();
+loadingAnimaton();
 navAnimation();
 page2Animation();
 page3VideoAnimation();
