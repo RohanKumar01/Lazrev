@@ -1,6 +1,8 @@
 function LocomotiveAnimation() {
+  // Registering GSAP with Scrolltrigger
   gsap.registerPlugin(ScrollTrigger);
 
+  // Initialze Locomotive Scroll
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
@@ -11,8 +13,11 @@ function LocomotiveAnimation() {
     // for mobile
     smartphone: { smooth: true },
   });
+
+  // Update ScrollTrigger on Locomotive Scroll events
   locoScroll.on("scroll", ScrollTrigger.update);
 
+  // Set up ScrollTrigger proxy with Locomotive Scroll
   ScrollTrigger.scrollerProxy("#main", {
     scrollTop(value) {
       return arguments.length
@@ -31,8 +36,8 @@ function LocomotiveAnimation() {
 
   // Remove code from red pannel to here from original Scrolltrigger + Locomotive
 
+  // Refresh ScrollTrigger and update Locomotive Scroll on resize or load
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
   ScrollTrigger.refresh();
 }
 function navAnimation() {
@@ -77,10 +82,11 @@ function navAnimation() {
 }
 function page2Animation() {
   var rightElems = document.querySelectorAll(".right-elem");
-  var relemImg = document.querySelectorAll("#righ-elem1 img");
+  // var relemImg = document.querySelectorAll("#righ-elem1 img");
 
   rightElems.forEach(function (elem) {
     elem.addEventListener("mouseenter", function () {
+      // console.log(elem.childNodes[3]);
       gsap.to(elem.childNodes[3], {
         opacity: 1,
         scale: 1,
@@ -123,6 +129,7 @@ function page3VideoAnimation() {
   });
 }
 function page4Videonimation() {
+  // To toggke ON/OFF of video
   var sections = document.querySelectorAll(".sec-right");
   sections.forEach(function (elem) {
     elem.addEventListener("mouseenter", function () {
@@ -138,8 +145,46 @@ function page4Videonimation() {
       elem.childNodes[3].load();
     });
   });
+
+  // Video Hover Animation
+  var hover = document.querySelectorAll(".sec-right");
+  // console.log(hover.childNodes);
+  hover.forEach(function (elem) {
+    elem.addEventListener("mouseenter", function () {
+      gsap.to(".hover", {
+        opacity: 1,
+        scale: 1,
+      });
+    });
+
+    elem.addEventListener("mouseleave", function () {
+      gsap.to(".hover", {
+        opacity: 0,
+        scale: 0,
+        duration: 0.4,
+        // ease: "expo.out",
+      });
+    });
+
+    elem.addEventListener("mousemove", function (dets) {
+      gsap.to(".hover", {
+        x: dets.x - elem.getBoundingClientRect().x - 40,
+        y: dets.y - elem.getBoundingClientRect().y - 50,
+      });
+    });
+  });
 }
 function page6Animation() {
+  // Page 6 Header Animation
+  // var tl = gsap.timeline();
+  // tl.from("#headerDiv h1", {
+  //   opacity: 0,
+  //   duration: 5,
+  //   // stagger:0.1,
+  //   ease: "expo.out",
+  // });
+
+  // Page 6 Bottom Animation
   gsap.from(".btm6-parts h4", {
     x: 0,
     duration: 1.2,
@@ -149,7 +194,8 @@ function page6Animation() {
     scrollTrigger: {
       trigger: ".btm6-parts",
       scroller: "body",
-      // markers: true,  //MArkrs to see strt and end of scroll trigger
+      // markers: true,
+      //Markrs to see strt and end of scroll trigger
       start: "top 80%",
       end: "top 0%",
       scrub: true,
@@ -188,6 +234,6 @@ LocomotiveAnimation();
 loadingAnimaton();
 navAnimation();
 page2Animation();
-page3VideoAnimation();
+// page3VideoAnimation();
 page4Videonimation();
 page6Animation();
