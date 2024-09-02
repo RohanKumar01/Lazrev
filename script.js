@@ -50,7 +50,7 @@ function navAnimation() {
     scrollTrigger: {
       trigger: "#page1",
       scroller: "body",
-      markers: true,
+      //markers: true,
       //Markrs to see strt and end of scroll trigger
       start: "top 30%",
       scrub: true,
