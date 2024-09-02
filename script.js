@@ -50,9 +50,9 @@ function navAnimation() {
     scrollTrigger: {
       trigger: "#page1",
       scroller: "body",
-      // markers: true,
+      markers: true,
       //Markrs to see strt and end of scroll trigger
-      start: "top 50%",
+      start: "top 30%",
       scrub: true,
     },
   });
@@ -242,9 +242,9 @@ function loadingAnimaton() {
 
 // LocomotiveAnimation();
 
-// loadingAnimaton();
-// navAnimation();
-// page2Animation();
-// // page3VideoAnimation();
-// page4Videonimation();
-// page6Animation();
+loadingAnimaton();
+navAnimation();
+page2Animation();
+// page3VideoAnimation();
+page4Videonimation();
+page6Animation();
