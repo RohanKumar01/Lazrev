@@ -43,42 +43,52 @@ function LocomotiveAnimation() {
 function navAnimation() {
   var nav = document.querySelector("nav");
 
-  nav.addEventListener("mouseenter", function () {
-    let tl = gsap.timeline();
+  let tl = gsap.timeline();
 
-    tl.to("#nav-bottom", {
-      height: "15vh",
-      duration: 0.5,
-    });
-    tl.to(".nav-part2 h5", {
-      display: "block",
-      duration: 0.1,
-    });
-    tl.to(".nav-part2 h5 span", {
-      y: 0,
-      // duration:0.3,
-      stagger: {
-        amount: 0.5,
-      },
-    });
+  tl.to("#nav-bottom", {
+    borderBottom: "1px solid #dadada",
+    scrollTrigger: {
+      trigger: "#page1",
+      scroller: "body",
+      // markers: true,
+      //Markrs to see strt and end of scroll trigger
+      start: "top 50%",
+      scrub: true,
+    },
   });
-  nav.addEventListener("mouseleave", function () {
-    let tl = gsap.timeline();
-    tl.to(".nav-part2 h5 span", {
-      y: 25,
-      stagger: {
-        amount: 0.2,
-      },
-    });
-    tl.to(".nav-part2 h5", {
-      display: "none",
-      duration: 0.1,
-    });
-    tl.to("#nav-bottom", {
-      height: 0,
-      duration: 0.2,
-    });
-  });
+  //   tl.to("#nav-bottom", {
+  //     height: "15vh",
+  //     duration: 0.5,
+  //   });
+  //   tl.to(".nav-part2 h5", {
+  //     display: "block",
+  //     duration: 0.1,
+  //   });
+  //   tl.to(".nav-part2 h5 span", {
+  //     y: 0,
+  //     // duration:0.3,
+  //     stagger: {
+  //       amount: 0.5,
+  //     },
+  //   });
+  // });
+  // nav.addEventListener("mouseleave", function () {
+  //   let tl = gsap.timeline();
+  //   tl.to(".nav-part2 h5 span", {
+  //     y: 25,
+  //     stagger: {
+  //       amount: 0.2,
+  //     },
+  //   });
+  //   tl.to(".nav-part2 h5", {
+  //     display: "none",
+  //     duration: 0.1,
+  //   });
+  //   tl.to("#nav-bottom", {
+  //     height: 0,
+  //     duration: 0.2,
+  //   });
+  // });
 }
 function page2Animation() {
   var rightElems = document.querySelectorAll(".right-elem");
@@ -230,10 +240,11 @@ function loadingAnimaton() {
   });
 }
 
-LocomotiveAnimation();
-loadingAnimaton();
-navAnimation();
-page2Animation();
-// page3VideoAnimation();
-page4Videonimation();
-page6Animation();
+// LocomotiveAnimation();
+
+// loadingAnimaton();
+// navAnimation();
+// page2Animation();
+// // page3VideoAnimation();
+// page4Videonimation();
+// page6Animation();

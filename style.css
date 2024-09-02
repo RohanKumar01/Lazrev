@@ -25,9 +25,9 @@ nav {
   display: flex;
   align-items: flex-start;
   width: 100%;
-  padding: 2vw 6.8vw;
+  padding: 1vw 6.8vw;
   justify-content: space-between;
-  height: 10vh;
+  height: 8vh;
   z-index: 10;
   background-color: black;
 }
@@ -51,9 +51,12 @@ nav button {
   background: #0ba34e;
   border-radius: 50px;
   display: flex;
+  font-family: Grotesk;
+  font-weight: 500;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8vw 1.1vw;
+  /* margin-top: -5vw; */
+  padding: 0.5vw 0.8vw;
   border: none;
 }
 
@@ -74,17 +77,23 @@ nav button svg {
 .nav-part2 {
   display: flex;
   gap: 2vw;
-  align-items: flex-start;
+  align-items: flex-end;
   padding: 1vh 0;
   position: relative;
   z-index: 10;
 }
 
 .nav-part2 h4 {
-  font-size: 0.73vw;
+  font-size: 1vw;
+  cursor: pointer;
   text-transform: uppercase;
   font-weight: 600;
+  font-family: Grotesk;
   margin-bottom: 1.5vw;
+}
+
+.nav-part2 h4:hover {
+  color: #0ba34e;
 }
 
 .nav-part2 h5 {
@@ -94,12 +103,12 @@ nav button svg {
   overflow: hidden;
 }
 
-.nav-part2 h5 span {
+/* .nav-part2 h5 span {
   font-size: 0.77vw;
   font-weight: 400;
   transform: translateY(25px);
   display: inline-block;
-}
+} */
 
 #nav-bottom {
   width: 79%;
@@ -109,25 +118,9 @@ nav button svg {
   top: 100%;
   background-color: #111;
   z-index: 9;
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #fff; */
 }
-/*
-#nav-bottom {
-  position: absolute;
-  border-bottom: 1px solid #dadada;
-  width: 89%;
-  bottom: 0%;
-  height: 0%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 2vw 15vw;
-  padding-left: 18vw;
-  padding-top: 3vw;
-  transition: all ease 0.5s;
-  /* background: red; */
-/* margin-left: -2vw;
-}  */
+
 #page1 {
   height: 100vh;
   width: 100%;
