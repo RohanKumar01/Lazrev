@@ -138,8 +138,41 @@ function page3VideoAnimation() {
     });
   });
 }
+
+function videoContainerAnimation() {
+  document
+    .querySelector("#videoDiv video")
+    .addEventListener("mouseenter", function () {
+      // console.log("Inside mouse enter");
+      gsap.to(".Video-hover", {
+        opacity: 1,
+        scale: 1,
+      });
+    });
+  document
+    .querySelector("#videoDiv video")
+    .addEventListener("mouseleave", function () {
+      // console.log("Inside mouse leave");
+
+      gsap.to(".Video-hover", {
+        opacity: 0,
+        scale: 0,
+      });
+    });
+  document;
+  var container = document.getElementById("videoDiv");
+
+  container.addEventListener("mousemove", function (dets) {
+    // console.log("Inside mouse move");
+
+    gsap.to(".Video-hover", {
+      x: dets.x - 710,
+      y: dets.y - 482,
+    });
+  });
+}
 function page4Videonimation() {
-  // To toggke ON/OFF of video
+  // To toggle ON/OFF of video
   var sections = document.querySelectorAll(".sec-right");
   sections.forEach(function (elem) {
     elem.addEventListener("mouseenter", function () {
@@ -247,4 +280,5 @@ navAnimation();
 page2Animation();
 // page3VideoAnimation();
 page4Videonimation();
+videoContainerAnimation();
 page6Animation();
